@@ -1,5 +1,8 @@
 # Ecommerce-Data-Analytics
 
+## Data Sources
+The project uses E-Commerce Public Dataset from Belajar Analisis Data dengan Python's Final Project offered by Dicoding.
+
 ## Overview
 This project focuses on analyzing and visualizing public e-commerce data. It includes code for data preprocessing, exploratory data analysis (EDA), and an interactive Streamlit dashboard for data exploration. The goal of this project is to gain insights from the E-Commerce Public Dataset.
 
@@ -21,14 +24,9 @@ Follow these steps to set up the project on your local machine:
 
 ## Run steamlit app
 you can access the dashboard in your web browser at http://localhost:8501 by running : 
-    ```bash
+   ```bash
     cd dashboard/dashboard
     streamlit run dashboard.py
-
-## Data Sources
-The project uses E-Commerce Public Dataset from Belajar Analisis Data dengan Python's Final Project offered by Dicoding.
-
-
 
 
 
