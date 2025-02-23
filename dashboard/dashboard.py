@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import geopandas as gpd
 import streamlit as st
+import requests
+from io import StringIO
 from streamlit_folium import folium_static
 from babel.numbers import format_currency
 
@@ -36,7 +38,13 @@ def create_map(df):
     return gdf
 
 #import dataset
-all_df = pd.read_csv("all_df.csv")
+url = "https://raw.githubusercontent.com/Rafaellsimarmata/Ecommerce-Data-Analytics/refs/heads/main/dashboard/all_df.csv"
+response = requests.get(url)
+
+if response.status_code != 200:
+    st.error("Failed to load data from GitHub.")
+
+all_df = pd.read_csv(StringIO(response.text))
 
 datetime_columns = ['order_purchase_timestamp', 'order_approved_at',
        'order_delivered_carrier_date', 'order_delivered_customer_date',
